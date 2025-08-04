@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Home Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(230, 224, 224, 0.3);
+      backdrop-filter: blur(6px);
+      color: rgb(17, 3, 75);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    nav {
+      margin-top: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      font-weight: bold;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 25px;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: rgb(6, 2, 22);
+      text-decoration: none;
+      font-style: italic;
+      font-size: 15px;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(160, 154, 240, 0.2);
+    }
+
+    @media(min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        margin-top: 0;
+      }
+    }
+
+    /* Main content placeholder */
+    .content {
+      padding-top: 120px;
+      padding-bottom: 100px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 40px 20px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      border-top: 2px solid #334155;
+    }
+    .footer-info {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .footer-info {
+        font-size: 0.85rem;
+      }
+
+      nav ul {
+        flex-direction: row; /* ✅ Make links row-wise in mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Vivekanand</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cerificate.html">Certificate</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Profile Cards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      padding: 0;
+      margin: 0;
+    }
+
+    .welcome-banner {
+      text-align: center;
+      padding: 20px;
+      color: rgb(68, 10, 161);
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 320px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Welcome Section -->
+<div class="welcome-banner">
+  "Hello and Welcome to my website — Vivekanand"
+</div>
+
+<!-- Cards Section -->
+<div class="cards-container">
+  <div class="card">
+    <img src="ss.jpg" alt="Profile">
+    <div class="card-content">
+      <h3>My Profile</h3>
+      <p>मेरा नाम विवेकानंद है और मैं भनौरी से हूँ। मैं एक जिज्ञासु और मेहनती व्यक्ति हूँ जिसे नई चीज़ें सीखना पसंद है। मेरा उद्देश्य जीवन में कुछ बड़ा और समाज के लिए उपयोगी करना है।  
+      My name is Vivekanand and I am from Bhanauri. I am a curious and hardworking person who loves learning new things. My goal is to achieve something meaningful and useful for society.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="cricket.jpeg" alt="Interests">
+    <div class="card-content">
+      <h3>My Interests</h3>
+      <p>मुझे क्रिकेट खेलना और भाषण देना बहुत पसंद है। ये दोनों मेरी सोच, आत्मविश्वास और टीम भावना को मजबूत करते हैं।  
+      I love playing cricket and delivering speeches. Both activities help build my confidence, thinking, and teamwork. They are an important part of my personality. I am big fan MS Dhoni because he is one of person who was very cool.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="project.jpg" alt="Project">
+    <div class="card-content">
+      <h3>My Project</h3>
+      <p>यह वेबसाइट मेरा अभ्यास प्रोजेक्ट है जिसमें मैंने HTML और CSS का उपयोग करके डिजाइनिंग सीखी है। यह मेरा आत्मनिर्भर बनने की ओर पहला कदम है।  
+      This website is my practice project where I learned designing using HTML and CSS. It’s my first step towards becoming self-reliant in web development. It is my first project and good project.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="br.jpg" alt="Inspired">
+    <div class="card-content">
+      <h3>Inspired By</h3>
+      <p>मैं डॉ. भीमराव अंबेडकर से प्रेरित हूँ। उनका संघर्ष और शिक्षा के प्रति समर्पण मुझे आगे बढ़ने की शक्ति देता है।  
+      I am inspired by Dr. B. R. Ambedkar. His struggle and dedication to education give me the strength to move forward and serve society. He is the biggest, greatest person of India. I am very inspired.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="ias.webp" alt="Goal">
+    <div class="card-content">
+      <h3>My Goal</h3>
+      <p>मेरा सपना IAS अधिकारी बनकर देश सेवा करना है। मैं मेहनत, ईमानदारी और समर्पण से यह लक्ष्य हासिल करना चाहता हूँ।  
+      My dream is to become an IAS officer and serve the country. I want to achieve this goal with hard work, honesty, and dedication. Sothat I will can do serve society. I wnat to do serve.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<br>
+<br>
+ <!-- Footer -->
+<footer>
+  <!-- Social Icons -->
+  <div class="social-icons" style="margin-bottom: 20px;">
+    <a href="https://www.instagram.com/vivekanand_roy_184?igsh=MWhhOW92dXo1MjA5bw==" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/918303606978" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/@vk_upsc_boy" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="footer-info">
+    <p>Address: Bhanauri, Belsara, Prayagraj, UP</p>
+    <p>Email: vivekanand00440@gmail.com | Mobile: ‪+91 8303606978‬</p>
+    <p>I am Vivekanand Roy from Bhanauri</p>
+  </div>
+</footer>
+
+<!-- Social Icons CSS -->
+<style>
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+
+  .social-icons .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  }
+
+  .social-icons .whatsapp {
+    background: #25D366;
+  }
+
+  .social-icons .youtube {
+    background: #FF0000;
+  }
+</style>

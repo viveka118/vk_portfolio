@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(240, 235, 235, 0.3);
+      backdrop-filter: blur(6px);
+      color: rgb(95, 37, 202);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-size: 34px;
+    }
+
+    nav {
+      margin-top: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: rgb(24, 24, 24);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(100, 83, 173, 0.2);
+    }
+
+    @media(min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        margin-top: 0;
+      }
+    }
+
+    /* Main content placeholder */
+    .content {
+      padding-top: 120px;
+      padding-bottom: 100px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 40px 20px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      border-top: 2px solid #334155;
+    }
+
+    .footer-icons {
+      margin-bottom: 15px;
+    }
+
+    .footer-icons a {
+      color: white;
+      margin: 0 15px;
+      font-size: 1.6rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-icons a:hover {
+      color: #38bdf8;
+    }
+
+    .footer-info {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .footer-info {
+        font-size: 0.85rem;
+      }
+
+      nav ul {
+        flex-direction: row; /* ✅ Make links row-wise in mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Vivekanand</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="cerificate.html">Certificate</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Vivekanand</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      color: #032b42;
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgb(231, 242, 245);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+      border: 3px solid #555;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #222;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    @media (max-width: 600px) {
+      .card img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>About Me / मेरे बारे में</h1>
+
+  <div class="about-container">
+    <div class="card">
+      <img src="ss.jpg" alt="Main Kaun Hoon">
+      <h3> Who Am I</h3>
+      <p>
+        मेरा नाम विवेकानंद है और मैं भानौरी गाँव से हूँ। मैं एक सामान्य परिवार से आता हूँ, लेकिन मेरे सपने बहुत बड़े हैं।
+        मुझे सीखने और अपने जीवन को सफल बनाने का जुनून है। मैंने जीवन में कई कठिनाइयाँ देखी हैं, लेकिन हर चुनौती ने मुझे मजबूत बनाया।
+        मेरा विश्वास है कि मेहनत और ईमानदारी से कुछ भी हासिल किया जा सकता है। <br><br>
+        My name is Vivekanand and I come from a small village called Bhanauri. I belong to a humble background but have big dreams.
+        I am passionate about learning and determined to succeed in life. I have faced many challenges, but each one has made me stronger.
+        I believe that with hard work and honesty, anything is possible.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="passion.jpeg" alt="Mera Passion">
+      <h3> My Passion</h3>
+      <p>
+        मेरा पैशन है क्रिकेट खेलना, भाषण देना और समाज के लिए कुछ अलग करना। मुझे मैदान में खेलते समय उत्साह मिलता है और मंच पर बोलते समय आत्मविश्वास।
+        मुझे लगता है कि हर इंसान में कुछ खास होता है, बस जरूरत है उसे पहचानने की। <br><br>
+        My passion is playing cricket, delivering speeches, and doing something impactful for society. I feel energetic on the field and confident on the stage.
+        I believe that everyone has a unique talent—it just needs to be discovered and nurtured. Passion keeps me motivated to keep improving myself every day.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="jass.jpeg" alt="Mera Safar">
+      <h3> My Journey</h3>
+      <p>
+        मेरा सफर आसान नहीं रहा, लेकिन हर मोड़ पर कुछ नया सीखने को मिला। मैंने सीमित संसाधनों में पढ़ाई की और हर अवसर का उपयोग किया।
+        स्कूल से लेकर डिजिटल दुनिया तक का सफर प्रेरणादायक रहा। <br><br>
+        My journey has not been easy, but it has been full of learning experiences. I studied with limited resources and made the most of every opportunity.
+        From village school to stepping into the digital world, my path has been full of inspiration and growth. I cherish every step I’ve taken.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="nation.jpeg" alt="Desh Ke Liye Junoon">
+      <h3> My Passion for Nation</h3>
+      <p>
+        मेरा सपना है कि मैं एक दिन IAS अधिकारी बनूं। यह न केवल एक प्रतिष्ठित पद है, बल्कि यह समाज सेवा का सबसे प्रभावी माध्यम भी है। मैं चाहता हूँ कि मैं देश की सेवा करूं, गरीबों के लिए योजनाएं लागू करूं और भ्रष्टाचार को खत्म करने में अपनी भूमिका निभाऊं।
+।<br><br>
+        My dream is to become an IAS officer and bring real change in the country. I love my nation and want every citizen to get their rights and opportunities.
+        This is not just a dream but a deep passion that drives me every day to work harder and be better for the nation.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
+ <!-- Footer -->
+<footer>
+  <!-- Social Icons -->
+  <div class="social-icons" style="margin-bottom: 20px;">
+    <a href="https://www.instagram.com/vivekanand_roy_184?igsh=MWhhOW92dXo1MjA5bw==" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/918303606978" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/@vk_upsc_boy" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="footer-info">
+    <p>Address: Bhanauri, Belsara, Prayagraj, UP</p>
+    <p>Email: vivekanand00440@gmail.com | Mobile: ‪+91 8303606978‬</p>
+    <p>I am Vivekanand Roy from Bhanauri</p>
+  </div>
+</footer>
+
+<!-- Social Icons CSS -->
+<style>
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+
+  .social-icons .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  }
+
+  .social-icons .whatsapp {
+    background: #25D366;
+  }
+
+  .social-icons .youtube {
+    background: #FF0000;
+  }
+</style>

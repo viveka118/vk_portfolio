@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(240, 235, 235, 0.3);
+      backdrop-filter: blur(6px);
+      color: rgb(95, 37, 202);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-size: 34px;
+    }
+
+    nav {
+      margin-top: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: rgb(24, 24, 24);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(100, 83, 173, 0.2);
+    }
+
+    @media(min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        margin-top: 0;
+      }
+    }
+
+    /* Main content placeholder */
+    .content {
+      padding-top: 120px;
+      padding-bottom: 100px;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 40px 20px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      border-top: 2px solid #334155;
+    }
+
+    .footer-icons {
+      margin-bottom: 15px;
+    }
+
+    .footer-icons a {
+      color: white;
+      margin: 0 15px;
+      font-size: 1.6rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-icons a:hover {
+      color: #38bdf8;
+    }
+
+    .footer-info {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .footer-info {
+        font-size: 0.85rem;
+      }
+
+      nav ul {
+        flex-direction: row; /* ✅ Make links row-wise in mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Vivekanand</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cerificate.html">Certificate</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      padding: 0px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 3 / 4;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
+
+    .gallery-item:hover .overlay {
+      transform: translateY(0);
+    }
+
+    @media (min-width: 768px) {
+      .gallery-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>My Gallery </h1>
+
+<div class="gallery-container">
+  <!-- Use JS to make fullscreen on click -->
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="ss.jpg" alt="Gallery Image" />
+    <div class="overlay">Nature Beauty – Green valleys, clear skies, and vibrant flowers – nature’s canvas is full of breathtaking beauty that refreshes the soul and calms the heart.
+</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul14.jpg" alt="Gallery Image" />
+    <div class="overlay">Holi 2025 ki dosto ke saath enjoy karte hui. this is very beautiful mouments</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul1.jpg" alt="Gallery Image" />
+    <div class="overlay">Mera best friend jo hamare sath asit me preperation kar rha hai "O"level </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul2.jpg" alt="Gallery Image" />
+    <div class="overlay">My big brother ham log patper water fall gye the waha ki image hai </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul3.jpg" alt="Gallery Image" />
+    <div class="overlay">Yah image 2024 ki hai jab ham log kisi khash relation ke yaha gye the </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul4.jpg" alt="Gallery Image" />
+    <div class="overlay">yah 2025 me bheem jayanti ki image hai Bhanauri ki jo hamare lie god hai BR Ambedkar ji</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul5.jpg" alt="Gallery Image" />
+    <div class="overlay">Yah gov college ki image hai jaya ham log gye the study ke lie but sahi nhi tha </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul6.jpg" alt="Gallery Image" />
+    <div class="overlay">yah image mere village ke ek dost ke sath ki hai jo ham log chale gye the gumte gumte kafi dur</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul7.jpg" alt="Gallery Image" />
+    <div class="overlay">ye image 2023 ki hai jo bahut pyaari image hai yah patper water fall ki hai mela ke time</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul8.jpg" alt="Gallery Image" />
+    <div class="overlay">ye mere pita ji and mata ji hai jo mere real ke god hai ma baap se badkar kuch nhi</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul9.jpg" alt="Gallery Image" />
+    <div class="overlay">ye bahut dukh dayi image hai kyuki ye image vidaai ki hai school ki bahut pyaari image hai </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul10.jpg" alt="Gallery Image" />
+    <div class="overlay">ye mere bade bhaiya hai hai jo mere real Hero hai shant cool and pyaare brother</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul11.jpg" alt="Gallery Image" />
+    <div class="overlay">ye image 26 january 2023 ki hai jab first time mai speech liya tha school me bolne ke lie</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul45.jpg" alt="Gallery Image" />
+    <div class="overlay">ye image 2022 ki hai jab mai first time bullet gadi chalaya tha and bahut pyaari image hai</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul12.jpg" alt="Gallery Image" />
+    <div class="overlay">yah mere pyaare dost ke birthday ki image hai jab ham tin dost 27 august 2022 me birthday par ek saath mile the</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul13.jpg" alt="Gallery Image" />
+    <div class="overlay">Rajo ka Raj prayagraj ki image hai jab NDA ka exam dekar aa rhe the tab ki image hai but afsosh fail ho gye fist time</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="rahul15.jpg" alt="Gallery Image" />
+    <div class="overlay">ye Prayagraj se dur ek khubsurat temple hai jaha ki yah pic hai bahut pyaari image and temple hai</div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="vive1.jpg" alt="Gallery Image" />
+    <div class="overlay">Asit ki image hai jab class karne gye the and tabhi hi image lie the </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="vive2.jpg" alt="Gallery Image" />
+    <div class="overlay">Prayagraj ki image hai jab ham log Navy ka paper dene gye the aur ham log  Waha bhi chale gye the </div>
+  </div>
+  <div class="gallery-item" onclick="viewFull(this)">
+    <img src="vive3.jpg" alt="Gallery Image" />
+    <div class="overlay">Yah image website presentation ki certificate lekar photo lete samay ki hai jo bahut hi achi thi </div>
+  </div>
+  
+</div>
+
+<script>
+  function viewFull(el) {
+    const img = el.querySelector("img");
+    const fullscreenImg = document.createElement("img");
+    fullscreenImg.src = img.src;
+    fullscreenImg.style.position = "fixed";
+    fullscreenImg.style.top = "0";
+    fullscreenImg.style.left = "0";
+    fullscreenImg.style.width = "100vw";
+    fullscreenImg.style.height = "100vh";
+    fullscreenImg.style.objectFit = "contain";
+    fullscreenImg.style.background = "rgba(0,0,0,0.95)";
+    fullscreenImg.style.zIndex = "9999";
+    fullscreenImg.style.cursor = "zoom-out";
+    fullscreenImg.onclick = () => fullscreenImg.remove();
+    document.body.appendChild(fullscreenImg);
+  }
+</script>
+
+</body>
+</html>
+<br>
+<br>
+  <!-- Footer -->
+<footer>
+  <!-- Social Icons -->
+  <div class="social-icons" style="margin-bottom: 20px;">
+    <a href="https://www.instagram.com/vivekanand_roy_184?igsh=MWhhOW92dXo1MjA5bw==" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/918303606978" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com/@vk_upsc_boy" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="footer-info">
+    <p>Address: Bhanauri, Belsara, Prayagraj, UP</p>
+    <p>Email: vivekanand00440@gmail.com | Mobile: ‪+91 8303606978‬</p>
+    <p>I am Vivekanand Roy from Bhanauri</p>
+  </div>
+</footer>
+
+<!-- Social Icons CSS -->
+<style>
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+
+  .social-icons .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  }
+
+  .social-icons .whatsapp {
+    background: #25D366;
+  }
+
+  .social-icons .youtube {
+    background: #FF0000;
+  }
+</style>
